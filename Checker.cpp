@@ -8,19 +8,27 @@ bool chargeIsOk(float chargeRate);
 
 bool temperatureIsOk(float temperature)
 {
-if(temperature < 0 || temperature > 45) 
-{
-    cout << "Temperature out of range!\n";
-    return false;
-  }
+    if(temperature < 0 || temperature > 45) 
+    {
+        cout << "Temperature out of range!\n";
+        return false;
+    }
+    else
+    {
+        return true;
+    }
 }
 
 bool socIsOk(float soc)
 {
   if(soc < 20 || soc > 80) 
   {
-    cout << "State of Charge out of range!\n";
-    return false;
+       cout << "State of Charge out of range!\n";
+       return false;
+  }
+  else
+  {
+       return true;
   }
 }
 
@@ -30,6 +38,10 @@ bool chargeIsOk(float chargeRate)
   {
     cout << "Charge Rate out of range!\n";
     return false;
+  }
+  else
+  {
+       return true;
   }
 }
 
